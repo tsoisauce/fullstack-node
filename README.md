@@ -4,7 +4,6 @@ This is a boilerplate project for a full-stack Node.js applications. Please refe
 
 ## Branches
 
-* Node.js `feature/node`
 * Koa.js `feature/koa`
 
 ## Installation
