@@ -1,5 +1,5 @@
 import Koa = require('koa')
-import router from './routes'
+import router from '../routes'
 import bodyParser = require('koa-bodyparser')
 import logger = require('koa-logger')
 import json = require('koa-json')
