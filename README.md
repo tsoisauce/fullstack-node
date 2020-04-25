@@ -14,6 +14,8 @@ Thank you Yarn!
 2. `yarn dev`
 3. visit: `http://localhost:3000`
 
+Note: to kill any port already in use `kill -9 $(lsof -t -i:3000)`
+
 ## Built with
 
 * [Node.js](https://github.com/nodejs/node)

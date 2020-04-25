@@ -1,5 +1,5 @@
 import Koa = require('koa')
-import Router = require('koa-router')
+import router from './routes'
 import bodyParser = require('koa-bodyparser')
 import logger = require('koa-logger')
 import json = require('koa-json')
@@ -10,12 +10,6 @@ dotenv.config()
 
 const port = process.env.PORT || 3000
 const server = new Koa()
-const router = new Router()
-
-router.get('/', ctx => {
-  ctx.body = "Hello World!"
-  ctx.res.statusCode = 200
-})
 
 server.use(bodyParser())
 server.use(logger())
