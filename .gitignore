@@ -1,0 +1,11 @@
+# Static files
+node_modules
+**.DS_store
+**.log
+.env
+.next
+
+# Public dist folders
+public
+build 
+out

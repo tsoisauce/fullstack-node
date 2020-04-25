@@ -1,0 +1,6 @@
+*.md
+**/build
+**/dist
+**/public
+**/.next
+**/out
