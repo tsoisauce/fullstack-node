@@ -4,36 +4,26 @@ import { create, read, update, remove } from './controller'
 const router = new Router()
 
 router.get('/', (ctx) => {
-  ctx.body = {
-    message: read()
-  }
+  ctx.body = read()
   ctx.res.statusCode = 200
 })
 
 router.post('/', (ctx) => {
-  ctx.body = {
-    status: 'success',
-    message: create(),
-    response: ctx.request.body,
-  }
+  const payload = ctx.request.body
+  ctx.body = create(payload)
   ctx.res.statusCode = 200
 })
 
-router.put('/', (ctx) => {
-  ctx.body = {
-    status: 'success',
-    message: update(),
-    response: ctx.request.body,
-  }
+router.put('/:id', (ctx) => {
+  const updateUserId = parseInt(ctx.params.id)
+  const payload = ctx.request.body
+  ctx.body = update(updateUserId, payload)
   ctx.res.statusCode = 200
 })
 
-router.delete('/', (ctx) => {
-  ctx.body = {
-    status: 'success',
-    message: remove(),
-    response: ctx.request.body,
-  }
+router.delete('/:id', (ctx) => {
+  const deleteUserId = parseInt(ctx.params.id)
+  ctx.body = remove(deleteUserId)
   ctx.res.statusCode = 200
 })
 
